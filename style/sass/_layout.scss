@@ -1,0 +1,137 @@
+.nav {
+    position: relative;
+    background-color: $primary-bg-color;
+    font-size: $default-font;
+    color: white;
+
+    @include clearfix;
+    //  &::after {
+    // //         padding-left: .5rem;
+    // //         content: "|";
+    //     }
+
+    &-list {
+        float: right;
+        
+        &-items {
+            display: inline-table;
+        }
+    }
+    &-link {
+        color: white;
+        padding: .5rem .7rem;
+        display: table-cell;
+        font-size: 1.2rem;
+        vertical-align: middle;
+        
+    }
+}
+.header {
+    color: white;
+    font-size: $default-font;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #fafafa;
+    @include clearfix;
+
+    &-logo-box {
+        float: left;
+
+        .header-logo {
+        width: 12rem;
+        }
+    }
+    &-container {
+        float: right;
+    }
+    &-list {
+        display: inline-table;
+        
+        &-items {
+            display: table-cell;
+            font-size: $default-font;
+            vertical-align: middle;
+            padding: 1rem 1.5rem;
+        }
+    }
+    &-link {
+        color: $color-text-grey;
+        
+    }
+    &-button {
+        width: 15rem;
+        padding: 1rem 1.5rem;
+        vertical-align: middle;
+    }
+}
+.about-section{
+    padding: 2rem;
+    .about-img-box {
+        position: relative;
+
+        .about-img {
+            width: 60%;
+            align-content: center;
+        }
+        .about-img-details {
+            font-size: 1.5rem;
+            position: absolute;
+            bottom: 2rem;
+            right: 4rem;
+
+            &-name {
+                color: black;
+                font-weight: 400;
+            }
+            &-title {
+                color: $color-text-grey;
+                font-weight: 400;
+            }
+        }
+    }
+      .about-text {
+          width: 80%;
+      }  
+}
+.team-section {
+    padding: 2rem;
+    
+    .new-row {
+        width: 100%;
+        max-width: 114rem;
+        margin: 0 auto;
+    }
+    
+    &-img {
+        padding: 1.3rem .5rem;
+        width: 100%;
+    }
+}
+.testimony-section {
+    padding: 3rem 4rem 10rem;
+    background-color: $primary-bg-color;
+    color: white;
+
+    .section-header {
+        font-size: 3rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+    &-img {
+        padding-top: 2rem;
+    }
+}
+.section-value {
+    padding: 4rem;
+}
+.section-story {
+    .green-row {
+        background-color: $color-text-green;
+
+        .new-container {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+    }
+}
