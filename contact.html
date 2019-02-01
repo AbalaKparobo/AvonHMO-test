@@ -12,94 +12,125 @@
      <nav class="nav">
         <ul class="nav-list">
             <li class="nav-list-items"><a class="nav-link" href="">Costumer Login</a></li>
-            <li class="nav-list-items"><a class="nav-link" href="">Contact Us</a></li>
+            <li class="nav-list-items"><a class="nav-link" href="contact.html">Contact Us</a></li>
             <li class="nav-list-items"><a class="nav-link" href="">24 hours Call Center <span>0700-2779800</span> | <span>01277-9800</span></a></li>
         </ul>
     </nav>
     <header class="header">
         <div class="header-logo-box">
-            <img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://www.avonhealthcare.com/wp-content/uploads/2015/02/Avon-logo.png" alt="Avon HMO" class="header-logo">
+            <a href="home.html">
+                <img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://www.avonhealthcare.com/wp-content/uploads/2015/02/Avon-logo.png" alt="Avon HMO" class="header-logo">
+            </a>
         </div>
         <div class="header-container">
             <ul class="header-list">
-                <li class="header-list-items"><a class="header-link" href="">Home</a></li>
+                <li class="header-list-items"><a class="header-link" href="home.html">Home</a></li>
                 <li class="header-list-items"><a class="header-link" href="">Find a Healthcare Provider</a></li>
                 <li class="header-list-items"><a class="header-link" href="">About Avon HMO</a></li>
             </ul>
             <button class="header-button cta"><a class="cta-link" href="">Buy a Health Plan</a></button>
         </div>
     </header>
-    <main>
-        <section>
-            <form action="" method="POST">
-                <select name="contact purpose" id="" required>
-                    <option value="disabled" disabled>How Can We Help You</option>
-                    <option value="buy-a-health-plan">Buy a Health Plan</option>
-                    <option value="refund/claim \-status">Refund/Claim Status</option>
-                    <option value="Website-Feedback">Website Feedback</option>
-                    <option value="General-Feedback">General Feedback</option>
-                    <option value="Provider-Feedback">Provider Feedback</option>
-                    <option value="Complaint">Complaint</option>
-                    <option value="Compliment">Compliment</option>
-                    <option value="Others">Others</option>
-                </select>
-                <select name="title" id="" required>
-                    <option value="Title" disabled>Title</option>
-                    <option value="Mr">Mr</option>
-                    <option value="Mrs">Mrs</option>
-                    <option value="Miss">Miss</option>
-                    <option value="Dr">Dr</option>
-                </select>
-                <input type="text" required name="Firstname" placeholder="Firstname">
-                <input type="text" required name="Surname" placeholder="Surname">
-                <input type="tel" required name="Phone-Number" placeholder="Phone Number">
-                <input type="email" required name="Email-Address" placeholder="Email Address">
-                <label for="member">I'm an Avon HMO member</label>
-                <input type="checkbox" name="member" id="member">
-                <input type="text" required name="Member-Number" placeholder="Member-Number">
-                <textarea name="Message" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Send">
-            </form>
-        </section>
-        <section>
-            <h3>Get In Touch</h3>
-            <h3>We'd love to hear from you</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8068162.7480266215!2d8.674253!3d9.1062724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4da444fc7f3%3A0xc712017d372400b!2s29+Rumens+Rd%2C+Ikoyi%2C+Lagos!5e0!3m2!1sen!2sng!4v1548909014131" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </section>
-            <section>
-            <div>
-                <h3>Avon Healthcare Limited</h3>
-                <p>
-                    <pre>
-                        29 Rumen Road
-                        off Bourdillon Road 
-                        Ikoyi
-                        Lagos
-                    </pre>
-                </p>
+    <main class="section-contact">
+        <div class="row bg-pad">
+            <div class="col-1-2">
+                <section>
+                    <form action="" method="POST">
+                        <div class="input-item">
+                            <label for="purpose" class="label">How Can We Help You</label>
+                            <select name="contact purpose" id="purpose" required  class="full-input">
+                                <option value="disabled" disabled="disabled">How Can We Help You</option>
+                                <option value="buy-a-health-plan">Buy a Health Plan</option>
+                                <option value="refund/claim \-status">Refund/Claim Status</option>
+                                <option value="Website-Feedback">Website Feedback</option>
+                                <option value="General-Feedback">General Feedback</option>
+                                <option value="Provider-Feedback">Provider Feedback</option>
+                                <option value="Complaint">Complaint</option>
+                                <option value="Compliment">Compliment</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <label for="title" class="label">Title</label>
+                            <select name="title" id="title" required class="full-input">
+                                <option value="Title" disabled="disabled">Title</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Dr">Dr</option>
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <input type="text" required name="Firstname" placeholder="Firstname" class="full-input">
+                        </div>
+                        <div class="input-item">
+                            <input type="text" required name="Surname" placeholder="Surname" class="full-input">
+                        </div>
+                        <div class="input-item">
+                            <input type="tel" required name="Phone-Number" placeholder="Phone Number" class="full-input">
+                        </div>
+                        <div class="input-item">
+                            <input type="email" required name="Email-Address" placeholder="Email Address" class="full-input">
+                        </div>
+                        <div class="input-item">
+                            <label for="member" class="label-inline">I'm an Avon HMO member</label>
+                            <input type="checkbox" name="member" id="member">
+                        </div>
+                        <div class="input-item">
+                            <input type="text" required name="Member-Number" placeholder="Member-Number" class="full-input">
+                        </div>
+                        <div class="input-item">
+                            <textarea name="Message" id="" cols="30" rows="10"  class="full-input"></textarea>
+                        </div>
+                        <div class="input-item">
+                                <input type="file" class="full-input">
+                            </div>
+                        <div class="input-item cntr-content">
+                            <input type="submit" value="Send" class="cta cta-link btn-send">
+                        </div>
+                    </form>
+                </section>
             </div>
-            <div>
-                <h3>Call</h3>
-                <p>
-                    For matter that require urgent attention contact our call center on 0700 277 9800
-                </p>
+            <div class="col-1-2">
+                <section class="contact">
+                    <h3 class="heading-primary-sub">Get In Touch</h3>
+                    <h3 class="heading-secondary">We'd love to hear from you</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8073003.249586687!2d8.67425299999998!3d8.889249829357459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4da444fc7f3%3A0xc712017d372400b!2s29+Rumens+Rd%2C+Ikoyi%2C+Lagos!5e0!3m2!1sen!2sng!4v1549010712086" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe> 
+                    <div class="contact-content">
+                        <h3 class="heading-primary-jnr">Avon Healthcare Limited</h3>
+                        <p class="contact-details">29 Rumen Road</p>
+                        <p class="contact-details">off Bourdillon Road</p>
+                        <p class="contact-details">Ikoyi</p>
+                        <p class="contact-details">Lagos</p>
+                    </div>
+                    <div class="contact-content">
+                        <h3 class="heading-primary-jnr">Call</h3>
+                        <p class="contact-details">
+                            For matter that require urgent attention contact our call center on 0700 277 9800
+                        </p>
+                    </div>
+                    <div class="contact-content">
+                        <h3 class="heading-primary-jnr">Email</h3>
+                        <p class="contact-details">
+                            info@avonhealthcare.com
+                        </p>
+                    </div>
+                </section>
             </div>
-            <div>
-                <h3>Email</h3>
-                <p>
-                    info@avonhealthcare.com
-                </p>
+        </div>
+        
+        <footer class="">
+            <div class="default-bg footer">
+                <span class="footer-copyright"> &copy; <script>var year = new Date().getFullYear(); document.write(year)</script> Avon Healthcare Limited. All Right Reserved</span>
+                <ul class="footer-list">
+                    <li class="footer-list-items"><a href="" class="footer-link">Resources</a></li>
+                    <li class="footer-list-items"><a href="" class="footer-link">FAQs</a></li>
+                    <li class="footer-list-items"><a href="" class="footer-link">Terms & Conditions</a></li>
+                    <li class="footer-list-items"><a href="" class="footer-link">Privacy Policy</a></li>
+                </ul>
             </div>
-        </section>
-        <footer>
-                <span> &copy; <script>var year = new Date().getFullYear(); document.write(year)</script> Avon Healthcare Limited. All Right Reserved</span>
-               <ul>
-                   <li><a href="">Resources</a></li>
-                   <li><a href="">FAQs</a></li>
-                   <li><a href="">Terms & Conditions</a></li>
-                   <li><a href="">Privacy Policy</a></li>
-               </ul>
-            </footer>
+        </footer>
     </main>
 </body>
 </html>

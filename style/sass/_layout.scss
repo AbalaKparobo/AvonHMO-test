@@ -1,14 +1,15 @@
 .nav {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: $primary-bg-color;
     font-size: $default-font;
     color: white;
+    padding: .5rem 1rem;
+    z-index: 2;
 
     @include clearfix;
-    //  &::after {
-    // //         padding-left: .5rem;
-    // //         content: "|";
-    //     }
 
     &-list {
         float: right;
@@ -19,12 +20,25 @@
     }
     &-link {
         color: white;
+        font-size: $default-font;
         padding: .5rem .7rem;
         display: table-cell;
         font-size: 1.2rem;
         vertical-align: middle;
         
+        &:hover {
+            color: $color-text-green;
+        }
+
+        @media(max-width: 800px) {
+            & {
+                .ph-num {
+                    display: none;
+                }
+            }
+        }
     }
+    
 }
 .header {
     color: white;
@@ -37,7 +51,14 @@
         float: left;
 
         .header-logo {
-        width: 12rem;
+            width: 12rem;
+        
+            @media (max-width: 900px) {
+                width: 10rem;
+            }
+            @media (max-width: 600px) {
+                width: 8rem;
+            }
         }
     }
     &-container {
@@ -55,12 +76,27 @@
     }
     &-link {
         color: $color-text-grey;
+
+        &:hover {
+            color: $primary-bg-color;
+        }
         
     }
     &-button {
         width: 15rem;
         padding: 1rem 1.5rem;
         vertical-align: middle;
+    }
+    @media(max-width: 1024px) {
+       & {
+            padding: 2rem .5rem 0;
+       }
+        &-container {
+            visibility: hidden;
+            opacity: 0;
+            width: 0;
+            display: none;
+        }
     }
 }
 .about-section{
@@ -69,8 +105,9 @@
         position: relative;
 
         .about-img {
-            width: 60%;
+            width: 70%;
             align-content: center;
+
         }
         .about-img-details {
             font-size: 1.5rem;
@@ -87,9 +124,20 @@
                 font-weight: 400;
             }
         }
+        @media (max-width: 750px) {
+            & {
+                display: none;
+            }
+        }
     }
       .about-text {
           width: 80%;
+
+          @media (max-width: 750px) {
+            padding: 1rem;
+            width: 100vw;
+            overflow: auto;
+        }
       }  
 }
 .team-section {
@@ -108,7 +156,6 @@
 }
 .testimony-section {
     padding: 3rem 4rem 10rem;
-    background-color: $primary-bg-color;
     color: white;
 
     .section-header {
@@ -126,12 +173,91 @@
 .section-story {
     .green-row {
         background-color: $color-text-green;
+    }
+}
+.section-cta-btn {
+    padding: 5rem 2rem;;
+}
+.section-contact {
 
-        .new-container {
-            width: 90%;
+    .contact {
+        padding: 1rem;
+    }
+    .map-container {
+        margin: 3rem 0;
+    }
+    .contact-content {
+
+        .contact-details {
+            color: $color-text-grey;
+            font-size: $default-font
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    background-color: $primary-bg-color;
+    font-size: $default-font;
+    color: white;
+    padding: .5rem 2rem;
+    @include clearfix;
+
+    &-list {
+        float: right;
+
+        
+        
+        &-items {
+            display: inline-table;
+
+            @media(max-width: 1024px) {
+                & {
+                    display: block;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            &:not(:last-of-type) {
+                &::after {
+                    content: "|";
+                    display: inline-table;
+
+                    @media(max-width: 1024px) {
+                        & {
+                            content: "";
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-link {
+        color: white;
+        font-size: $default-font;
+        padding: .5rem .7rem;
+        margin: 0;
+        display: table-cell;
+        font-size: 1.2rem;
+        vertical-align: middle;
+
+        @media(max-width: 1024px) {
+            & {
+                display: inline-block;
+                width: 100%;
+                padding: 1rem .5rem 0 0;
+            }
+        }
+
+        &:hover {
+            color: $color-text-green;
+        }
+    }
+    @media(max-width: 1024px) {
+        &-copyright {
+            text-align: center;
             margin: 0 auto;
-            overflow: hidden;
-            border: 1px solid black;
         }
     }
 }

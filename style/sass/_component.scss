@@ -1,5 +1,5 @@
 .cta {
-    background-color: #488948;
+    background-color: $color-text-green;
     color: white;
     border-radius:  2px;
     outline: none;
@@ -12,9 +12,15 @@
         text-align: center;
         
     }
+
+    &-big {
+        padding: 1.5rem 2.5rem;
+        font-size: $default-font;
+        font-weight: 500;
+    }
 }
 .cta:hover {
-    background-color: $color-text-green;
+    background-color:#488948 ;
 }
 
 .heading-primary {
@@ -22,10 +28,21 @@
     font-size: 6rem;
     font-weight: 700;
 
+    @media (max-width: 750px) {
+        font-size: 5rem;
+    }
+
     &-sub {
         color: $color-text-green;
         font-size: 4rem;
         font-weight: 700;
+    }
+    &-jnr {
+        color: $color-text-green;
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding-bottom: .5rem;
+        margin-top: 2rem;
     }
 }
 
@@ -33,6 +50,10 @@
     color: $primary-bg-color;
     font-size: 2.5rem;
     font-weight: 700;
+
+    @media (max-width: 750px) {
+        font-size: 2rem;
+    }
 }
 .paragraph {
     color: $color-text-grey;
@@ -50,21 +71,23 @@
     font-size: $default-font;
     line-height: 1.7;
 }
-.col-1-33 {
-    display: inline-block;
-    width: 33%;
-    margin: 0;
-}
+
 .port {
     padding: 2rem;
     &-1 {
         background-color: white;
     }
     &-2 {
-        background-color: $color-text-grey;
+        background-color: #e9e9e9;
     }
     &-3 {
-        background-color: $color-light-grey
+        background-color: $color-light-grey;
+    }
+
+    @media(max-width: 1024px) {
+        & {
+            display: none;
+        }
     }
 }
 
@@ -75,24 +98,52 @@
     background: rgba(0, 0, 0, .5); 
 }
 .story {
-    display: inline-block;
     width: 20%;
-    margin: -2px;
     padding: 2rem 1rem;
-    border: 1px solid black;
-    color: #5a5a5a;
+    color: white;
+    &:not(:last-of-type) {
+        margin-right: -5px;
+    }
 
     &-1 {
         background-color: $primary-bg-color;
-        color: white;
     }
     &-2 {
-        background-color: $color-light-grey;
+        background-color: #f9f9f9;
+        color: #8a8a8a;
     }
     &-3 {
-        background-color: $color-text-grey;
+        background-color: #dbdbdb;
+        color: #8a8a8a;
+
     }
     i {
-        margin-right: .5rem;
+        margin-right: 1rem;
     }
+}
+
+.input-item {
+    padding: 1rem;
+    font-size: $default-font;
+
+    .full-input {
+        display: block;
+        font-size: $default-font;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .label {
+        display: block;
+        padding-bottom: 2rem;
+
+        &-inline {
+            display: inline-block;
+        }
+    }
+}
+
+.btn-send {
+    padding: 1rem 1.5rem;
+    font-size: $default-font;
 }

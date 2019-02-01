@@ -5,6 +5,12 @@
 }
 html {
     font-size: 62.5%;
+
+    @media (max-width: 700) {
+        & {
+            font-size: 50%;
+        }
+    }
 }
 body {
     font-size: $default-font;
@@ -27,4 +33,27 @@ ul,li {
 }
 .cntr-content {
     text-align: center;
+}
+.new-container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+     
+    &-2 {
+        text-align: center;
+    }
+}
+.default-bg {
+    background-color: $primary-bg-color;
+}
+.bg-pad {
+    padding: 4rem 2rem;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flex-wrap {
+    flex: 1;
 }
