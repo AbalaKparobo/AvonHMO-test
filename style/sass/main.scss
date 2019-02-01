@@ -1,18 +1,7 @@
 @import "abstract";
+@import "grid";
 @import "base";
 @import "component";
 @import "layout";
 @import "pages";
-@import "grid";
 @import "../css/font-awesome-4.7.0/scss/font-awesome.scss";
-
-// @include font-face('FontAwesome',
-// font-files(
-// 'font-awesome/font/fontawesome-webfont.woff', woff,
-// 'font-awesome/font/fontawesome-webfont.ttf', ttf,
-// 'font-awesome/font/fontawesome-webfont.svg', svg),
-// 'font-awesome/font/fontawesome-webfont.eot');
-
-//  %icon-font {
-//      font-family: 'FontAwesome', Helvetica, Arial, sans-serif;
-//   }

@@ -30,6 +30,10 @@ ul,li {
 .container {
     width: 70%;
     margin: 0 auto;
+
+    @media (max-width: 650px) {
+        width: 100%;
+    }
 }
 .cntr-content {
     text-align: center;
@@ -38,6 +42,17 @@ ul,li {
     width: 90%;
     margin: 0 auto;
     overflow: hidden;
+
+    @media (max-width: 650px) {
+        & {
+            width: 100%;
+
+            i {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
      
     &-2 {
         text-align: center;

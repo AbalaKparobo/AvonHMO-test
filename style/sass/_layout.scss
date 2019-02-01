@@ -135,8 +135,8 @@
 
           @media (max-width: 750px) {
             padding: 1rem;
-            width: 100vw;
-            overflow: auto;
+            width: 90vw;
+            overflow: scroll;
         }
       }  
 }
@@ -162,17 +162,51 @@
         font-size: 3rem;
         font-weight: 600;
         padding-bottom: 2rem;
+        overflow: auto;
+
+        @media (max-width: 750px) {
+            font-size: 2rem; 
+            padding: 2rem 0 0;
+            text-align: center;
+        }
     }
     &-img {
         padding-top: 2rem;
     }
+
+    @media (max-width: 650px) {
+        .img-box {margin: 0 auto;}
+    }    
+
+    @media (max-width: 650px) {
+        .col-2-adj {
+            display: block;
+            width: 90vw;
+        }
+    }
+    @media (max-width: 650px) {
+        & {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
 }
 .section-value {
     padding: 4rem;
+
+    @media(max-width: 750) {
+        padding: 1rem;
+        width: 100vw;
+        border: 1px solid black;
+    }
 }
 .section-story {
     .green-row {
         background-color: $color-text-green;
+    }
+
+    @media (max-width: 500px) {
+        display: none;
     }
 }
 .section-cta-btn {
@@ -185,12 +219,46 @@
     }
     .map-container {
         margin: 3rem 0;
+        @media (max-width: 650px) {
+            & {
+               padding: none;
+            }
+        }
+        .map {
+            width: 60rem; 
+            height: 40rem;
+
+            @media (max-width: 850px) {
+                & {
+                    width: 40rem;
+                    height: 30rem;
+                    // display: none;
+                }
+            }
+            @media (max-width: 500px) {
+                & {
+                    width: 27rem;
+                    height: 20rem;
+                    // display: none;
+                }
+            }
+        }
     }
     .contact-content {
 
         .contact-details {
             color: $color-text-grey;
-            font-size: $default-font
+            font-size: $default-font;
+
+            @media (max-width: 750px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @media (max-width: 700px) {
+        .col-2-adj {
+            display: block;
+            width: 100%;
         }
     }
 }
@@ -206,12 +274,11 @@
     &-list {
         float: right;
 
-        
-        
+
         &-items {
             display: inline-table;
 
-            @media(max-width: 1024px) {
+            @media(max-width: 950px) {
                 & {
                     display: block;
                     padding: 0;
@@ -223,7 +290,7 @@
                     content: "|";
                     display: inline-table;
 
-                    @media(max-width: 1024px) {
+                    @media(max-width: 950px) {
                         & {
                             content: "";
                             display: none;
@@ -242,7 +309,7 @@
         font-size: 1.2rem;
         vertical-align: middle;
 
-        @media(max-width: 1024px) {
+        @media(max-width: 950px) {
             & {
                 display: inline-block;
                 width: 100%;
@@ -254,10 +321,11 @@
             color: $color-text-green;
         }
     }
-    @media(max-width: 1024px) {
+    @media(max-width: 950px) {
         &-copyright {
             text-align: center;
             margin: 0 auto;
+            overflow: hidden;
         }
     }
 }
