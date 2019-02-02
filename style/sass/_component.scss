@@ -1,3 +1,62 @@
+.responsive-nav {
+    display: none;
+}
+@media (max-width: 1024px) {
+    .responsive-nav {
+        display: block;
+
+        .res-nav {
+            float: right;
+        padding: 2rem 0;    
+         
+        .responsive-list {
+            display: none;
+            max-width: 30rem;
+            width: 100%;
+    
+            &-items {
+                display: block;
+                padding: 2.5rem 1rem 1rem;
+                text-align: left;
+    
+                &:hover {
+                    background-color: $color-light-grey;
+                }
+            }
+        }
+    
+        &-link {
+            color: black;
+            font-size: $default-font;
+    
+            &:hover {
+                color: $primary-bg-color;
+            }
+        }
+        
+        label.responsive-menu {
+            display: block;
+            // padding: .1rem 2.5px;
+            position: fixed;
+            top: 4rem;
+            right: 4rem;
+            color: black;
+            font-size: 3rem;
+            z-index: 3;
+        }
+        input.responsive-menu {
+            display: none;
+        }
+        .responsive-menu:checked ~ .row .responsive-list {
+            display: block;
+            max-width: 40rem;
+            width: 100%;        
+        } 
+    }
+}
+        }
+        
+
 .cta {
     background-color: $color-text-green;
     color: white;
@@ -105,7 +164,7 @@
         background-color: white;
     }
     &-2 {
-        background-color: #e9e9e9;
+        background-color: #f7f7f7;
     }
     &-3 {
         background-color: $color-light-grey;
