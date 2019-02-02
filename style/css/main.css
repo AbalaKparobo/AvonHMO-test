@@ -228,10 +228,7 @@ ul, li {
       display: none; } }
 
 .border {
-  content: "";
-  width: 3rem;
-  border-bottom: 5px solid black;
-  background: rgba(0, 0, 0, 0.5); }
+  content: ""; }
 
 .story {
   width: 20%;
